@@ -8,14 +8,14 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use((req, res, next) => {
-//   const { api } = req.body;
-//   if (!api) {
-//     res.status(401).send("Usuario no autorizado");
-//     return;
-//   }
-//   next();
-// });
+app.use((req, res, next) => {
+  const { api } = req.body;
+  if (!api) {
+    res.status(401).send("Usuario no autorizado");
+    return;
+  }
+  next();
+});
 
 app.use(route);
 

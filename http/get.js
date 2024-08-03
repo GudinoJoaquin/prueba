@@ -23,3 +23,20 @@ export const getAnuncio = (req, res) => {
     res.send(result);
   });
 };
+
+export const getUser = (req, res) => {
+  const { user, pass } = req.body
+  const sql = 'SELECT * FROM admin WHERE name = ? AND pass = ?'
+  conexion.query(sql, [user, pass], (err, result) => {
+    if(err){
+      console.log('Error obteniendo usuario de la base de datos')
+      res.status(500).send('Error interno del servidor')
+      return
+    }
+    const userData = result[0]
+    res.send({
+      user: userData.name,
+      pass: userData.pass
+    })
+  })
+}

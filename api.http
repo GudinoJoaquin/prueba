@@ -6,6 +6,16 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:1234/user
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
+    "user": "123",
+    "pass": "123"
+}
+
+###
 POST http://localhost:1234/post
 Content-Type: application/json
 
@@ -16,7 +26,6 @@ Content-Type: application/json
     "imagen": "dsfsdf",
     "adjunto": "dfdf"
 }
-
 
 ###
 POST http://localhost:1234/update
@@ -29,6 +38,16 @@ Content-Type: application/json
     "imagen": " dsfsdf",
     "adjunto": "dfdf",
     "id": 9
+}
+
+###
+POST http://localhost:1234/updateUser
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
+    "newUser": "123",
+    "newPass": "123"
 }
 
 ###
