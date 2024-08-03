@@ -1,11 +1,12 @@
 import mysql from 'mysql2'
 
 const conexion = mysql.createConnection({
-    host: process.env.host,
-    user: process.env.user,
-    password: process.env.password,
+    host: 'mysql.railway.internal',
+    user: 'root',
+    password: 'HMjsCMdOGRnbiwRcUoAESpGqltjEHgen',
     database: 'railway',
-    port: process.env.port
+    port: 3306,
+    uri: 'mysql://root:HMjsCMdOGRnbiwRcUoAESpGqltjEHgen@mysql.railway.internal:3306/railway'
 })
 
 
