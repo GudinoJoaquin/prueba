@@ -1,22 +1,25 @@
-import mysql from 'mysql2'
+import mysql from "mysql2";
 
 const conexion = mysql.createConnection({
-    host: 'mysql.railway.internal',
+    host: 'monorail.proxy.rlwy.net',
     user: 'root',
     password: 'HMjsCMdOGRnbiwRcUoAESpGqltjEHgen',
     database: 'railway',
-    port: 3306,
-    uri: 'mysql://root:HMjsCMdOGRnbiwRcUoAESpGqltjEHgen@mysql.railway.internal:3306/railway'
 })
 
-
+// const conexion = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "anunciost5mdp",
+// });
 
 conexion.connect((err) => {
-    if(err){
-        throw err;
-    } else {
-        console.log('Conectado a la base de datos')
-    }
-})
+  if (err) {
+    throw err;
+  } else {
+    console.log("Conectado a la base de datos");
+  }
+});
 
-export default conexion
+export default conexion;
