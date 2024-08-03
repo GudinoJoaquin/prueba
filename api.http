@@ -1,0 +1,40 @@
+GET http://localhost:1234
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF"
+}
+
+###
+POST http://localhost:1234/post
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
+    "titulo": "gfdg",
+    "mensaje": "fdf",
+    "imagen": "dsfsdf",
+    "adjunto": "dfdf"
+}
+
+
+###
+POST http://localhost:1234/update
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
+    "titulo": "titulo",
+    "mensaje": "fdf",
+    "imagen": " dsfsdf",
+    "adjunto": "dfdf",
+    "id": 9
+}
+
+###
+DELETE http://localhost:1234/delete?id=13
+Content-Type: application/json
+
+{
+    "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF"
+}
