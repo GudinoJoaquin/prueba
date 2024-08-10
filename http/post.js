@@ -25,6 +25,6 @@ export const postAnuncio = (req, res) => {
       return;
     }
     // Redirige a la página de inicio después de que se haya insertado el anuncio con éxito
-    res.redirect("/");
+    res.redirect("http://localhost:5173");
   });
 };

@@ -26,7 +26,7 @@ export const getAnuncio = (req, res) => {
 
 export const getUser = (req, res) => {
   const { user, pass } = req.body
-  const sql = 'SELECT * FROM admin WHERE name = ? AND pass = ?'
+  const sql = 'SELECT * FROM users WHERE id = 1'
   conexion.query(sql, [user, pass], (err, result) => {
     if(err){
       console.log('Error obteniendo usuario de la base de datos')

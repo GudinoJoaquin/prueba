@@ -3,7 +3,8 @@ import conexion from "../conexion.js";
 export const updateAnuncio = (req, res) => {
   // Obtiene los datos del cuerpo de la solicitud HTTP
 
-  const { titulo, mensaje, imagen, adjunto, id } = req.body;
+  const { titulo, mensaje, imagen, adjunto } = req.body;
+  const id = req.body.anuncioID
 
   // Consulta SQL para actualizar un anuncio en la base de datos
   const sql =
@@ -18,13 +19,13 @@ export const updateAnuncio = (req, res) => {
       return;
     }
     // Redirige a la página de inicio después de que se haya editado el anuncio con éxito
-    res.send("Anuncio modificado");
+    res.redirect('http://localhost:5173');
   });
 };
 
 export const updateUser = (req, res) => {
   const { newUser, newPass } = req.body;
-  const sql = "UPDATE admin SET name = ?, pass = ? WHERE id = 1";
+  const sql = "UPDATE users SET name = ?, pass = ? WHERE id = 1";
   conexion.query(sql, [newUser, newPass], (err, result) => {
     if (err) {
       console.log("Error al modificar el usuario en la base de datos");

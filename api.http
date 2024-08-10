@@ -9,10 +9,11 @@ Content-Type: application/json
 GET http://localhost:1234/user
 Content-Type: application/json
 
+
 {
     "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
-    "user": "123",
-    "pass": "123"
+    "user": "12345",
+    "pass": "12345"
 }
 
 ###
@@ -33,11 +34,11 @@ Content-Type: application/json
 
 {
     "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
-    "titulo": "titulo",
+    "titulo": "hoy es jueves",
     "mensaje": "fdf",
     "imagen": " dsfsdf",
     "adjunto": "dfdf",
-    "id": 9
+    "id": 14
 }
 
 ###
@@ -46,12 +47,12 @@ Content-Type: application/json
 
 {
     "api": "CBuW$66aWU!MbZ41h^JH^nLAw%^^sh%JfJmp82#ud*YX91Fx5N6%t6%!udFF",
-    "newUser": "123",
-    "newPass": "123"
+    "newUser": "12345",
+    "newPass": "12345"
 }
 
 ###
-DELETE http://localhost:1234/delete?id=13
+DELETE http://localhost:1234/delete?id=14
 Content-Type: application/json
 
 {
